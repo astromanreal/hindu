@@ -1,0 +1,45 @@
+.AartiPage-hero {
+  background-image: url(https://images.unsplash.com/photo-1502218808493-e5fd26249efc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+#AartiPage-article {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 20px;
+}
+#AartiPage-article h1 {
+  margin-top: -100px;
+  margin-left: -20px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  font-size: 40px;
+  line-height: 40px;
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(20px);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.6)
+  );
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+#AartiPage-article h1 .AartiPage-byline {
+  font-size: 14px;
+}
+#AartiPage-article p {
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: rgb(88, 73, 73);
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 12px;
+}

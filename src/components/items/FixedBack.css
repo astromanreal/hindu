@@ -1,0 +1,42 @@
+#FixedBack-hero1 {
+  background: url(https://4.bp.blogspot.com/_AQ0vcRxFu0A/S9shDGGyMTI/AAAAAAAAAYk/kn3WTkY2LoQ/s1600/IMG_0714.JPG);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+#FixedBack-hero2 {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/Melissani-cave-natural.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.FixedBack-hero,
+.FixedBack-content {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.FixedBack-inner {
+  min-height: 600px;
+  position: relative;
+}
+.FixedBack-hero .FixedBack-inner {
+  background: rgba(0, 0, 0, 0.7)
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC)
+    repeat;
+}
+.FixedBack-copy {
+  position: absolute;
+  top: 50%;
+  height: 10em;
+  margin-top: -5em;
+  width: 100%;
+}
+.FixedBack-hero h1,
+.FixedBack-hero p {
+  color: #fff;
+}
+.FixedBack-content h1,
+.FixedBack-content p {
+  color: #333;
+}

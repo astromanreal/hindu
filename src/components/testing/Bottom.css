@@ -1,0 +1,197 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 991px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+.hero .box {
+  height: 100vh;
+  position: relative;
+}
+.hero .content {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+@media screen and (max-width: 991px) {
+  .hero .content {
+    padding: 40px;
+    align-items: flex-end;
+    height: 60vh;
+  }
+}
+.hero .content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+}
+@media screen and (max-width: 991px) {
+  .hero .content header {
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .content header {
+    flex-direction: column;
+  }
+}
+.hero .content header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+  .hero .content header .logo {
+    margin-bottom: 10px;
+  }
+}
+.hero .content header nav ul {
+  display: flex;
+  gap: 25px;
+}
+.hero .content header nav ul li:nth-child(1) a {
+  color: #78c0a8;
+}
+.hero .content .socials {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  gap: 10px;
+}
+@media screen and (max-width: 991px) {
+  .hero .content .socials {
+    display: none;
+    visibility: hidden;
+  }
+}
+.hero .content .socials h2 {
+  font-size: 1rem;
+}
+.hero .content .socials li i {
+  font-size: 1.5rem;
+}
+.hero .content .socials li i:hover {
+  color: #78c0a8;
+}
+.hero .content blockquote {
+  font-size: 3.2rem;
+  font-style: italic;
+  color: #333;
+  line-height: 1.375;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .hero .content blockquote {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .content blockquote {
+    font-size: 2rem;
+  }
+}
+.hero .content blockquote:before {
+  font-family: Arial;
+  content: "\201C";
+  color: #78c0a8;
+  font-size: 8rem;
+  position: absolute;
+  left: -5px;
+  top: -90px;
+}
+@media screen and (max-width: 991px) {
+  .hero .content blockquote:before {
+    font-size: 6rem;
+    top: -60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .content blockquote:before {
+    font-size: 4.2rem;
+    top: -45px;
+  }
+}
+.hero .content blockquote:after {
+  content: "";
+}
+.hero .content blockquote span {
+  display: block;
+  color: #555;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 2em;
+  position: relative;
+  margin-left: 3.5em;
+}
+.hero .content blockquote span:before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #555;
+  left: -60px;
+  top: 50%;
+  display: block;
+}
+.hero .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 35vh 30vh 35vh;
+}
+@media screen and (max-width: 991px) {
+  .hero .images {
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .images {
+    grid-template-rows: 20vh 10vh 20vh;
+  }
+}
+.hero .images .imgBox {
+  position: relative;
+  width: 100%;
+}
+.hero .images .imgBox:nth-child(1) {
+  grid-row: span 2;
+  background: red;
+}
+.hero .images .imgBox:nth-child(2) {
+  background: yellow;
+}
+.hero .images .imgBox:nth-child(3) {
+  background: green;
+  grid-row: span 2;
+}
+.hero .images .imgBox:nth-child(4) {
+  background: blue;
+}
+.hero .images .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-height: 600px) {
+  .content {
+    min-height: 350px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .hero .content blockquote {
+    font-size: 5rem;
+  }
+}

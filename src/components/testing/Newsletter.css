@@ -1,0 +1,93 @@
+#Newsletter {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #98aaeb;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.Newsletter-container {
+  background-color: #fff;
+  width: 600px;
+  height: 450px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.Newsletter-container::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #ff9ec4, #ffd07e);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.Newsletter-container-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2e4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+}
+.Newsletter-container img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.Newsletter-container-text {
+  padding: 10px 40px 10px 10px;
+}
+.Newsletter-container-text h2 {
+  font-size: 1.2rem;
+  color: #1a2250;
+}
+.Newsletter-container-text p {
+  font-size: 14px;
+  color: #3b4169;
+  margin: 10px 0;
+}
+.Newsletter-container-text input,
+.Newsletter-container-text button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+.Newsletter-container-text input {
+  border: 2px solid #daddec;
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #656880;
+}
+.Newsletter-container-text button {
+  background-image: linear-gradient(to right, #89caff, #6589ff);
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #89caff 94;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.Newsletter-container-text button:hover {
+  box-shadow: none;
+}
+.Newsletter-container-text span {
+  display: block;
+  text-align: center;
+  margin: 20px 0 0;
+  color: #babdcb;
+  font-size: 12px;
+}

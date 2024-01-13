@@ -1,0 +1,82 @@
+#search-form {
+  position: relative;
+  height: 100vh;
+  background-image: url(https://e0.pxfuel.com/wallpapers/628/749/desktop-wallpaper-simon-stålenhag-and-mobile-background.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+#search-form::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(18, 16, 46, 0.5);
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: min(400px, 90vw);
+  font: 100 1rem helvetica, sans-serif;
+  letter-spacing: 0.05rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 3rem;
+  outline: none;
+  padding: 1rem 3rem 1rem;
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-search-cancel-button {
+  display: none;
+  pointer-events: none;
+}
+
+.search-submit,
+.search-clear {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.search-submit {
+  left: 1rem;
+}
+
+.search-clear {
+  width: 1rem;
+  height: 1rem;
+  right: 1rem;
+  display: none;
+}
+
+.search-icon {
+  width: inherit;
+  height: inherit;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.visible {
+  display: block;
+}

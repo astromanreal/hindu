@@ -1,0 +1,132 @@
+:root {
+  --bg: rgb(83, 83, 83);
+  --primary: rgb(220, 32, 32);
+  --link: rgb(93, 34, 34);
+  --title: rgb(78, 12, 12);
+  --year: rgb(77, 16, 16);
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+.hover {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+  list-style-type: none;
+  gap: 1px;
+}
+
+.hover-item {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hover-overlay,
+.hover-image {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.hover-image {
+  object-fit: cover;
+  transform: scale(1.25);
+  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hover-item:nth-of-type(2) .hover-image {
+  object-position: 70%;
+}
+.hover-item-container:hover .hover-image {
+  transform: scale(1);
+}
+
+.hover-overlay {
+  background-color: var(--primary);
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hover-item-container:hover .hover-overlay {
+  transform: translateY(100vh);
+}
+
+.hover-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hover-title {
+  margin-top: 2vmin;
+  font: 5vmin "arial-black", sans-serif;
+  color: var(--title);
+  transition: color 0.5s;
+}
+
+.hover-item-container:hover .hover-title {
+  color: white;
+}
+
+.hover-year {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 100;
+  font-size: 0.85rem;
+  color: var(--year);
+  transition: color 0.25s;
+}
+
+.hover-item-container:hover .hover-year {
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .hover {
+    display: flex;
+    flex-direction: column;
+  }
+  .hover-item {
+    height: 25vh;
+  }
+  .hover-image {
+    height: 100%;
+  }
+  .hover-item:nth-of-type(1) .hover-image {
+    object-position: 30% 30%;
+  }
+  .hover-item:nth-of-type(2) .hover-image {
+    object-position: 50% 80%;
+  }
+  .hover-item:nth-of-type(3) .hover-image {
+    object-position: 50% 40%;
+  }
+  .hover-item:nth-of-type(4) .hover-image {
+    object-position: 50% 60%;
+  }
+  .hover-copy {
+    height: 100%;
+    padding: 3.5rem;
+  }
+  .hover-title {
+    font-size: 1.5rem;
+  }
+  .hover-item-container:hover .hover-title {
+    color: var(--primary);
+  }
+  .hover-year {
+    bottom: 2.25rem;
+    font-size: 0.75rem;
+  }
+}
